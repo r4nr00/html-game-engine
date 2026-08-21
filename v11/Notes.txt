@@ -1,0 +1,89 @@
+// YouTube tutorials:
+// https://www.youtube.com/watch?v=c-1dBd1_G8A
+// https://www.youtube.com/watch?v=ug-gdfGb7I8 - JavaScript Game Tutorial - Advanced Techniques
+
+
+Bootstrap
+- Using bootstrap for HUD / UI elements
+
+
+State Machine
+- passing input into state machine's base state through context object
+
+
+Canvas
+- Game Resolution (what the game uses and works with)
+- Display Size
+
+
+Renderer
+- Display Resolution
+- Scaling
+- Canvas / Window Resizing
+- Drawing
+
+
+
+
+--------------------------------------------------------------------------------
+CONFIG
+Display & Graphics Settings
+- scaleMode
+- pixelated mode for images? (pixel art settings vs other)
+- target FPS?
+- window resolution
+- default theme info (i.e., font family, styles, sizes, and colors?)
+- full screen?
+
+Input & Control Settings
+- which devices to use? (i.e., controller)
+- keyboard preventKeys
+- gamepad deadzone
+- Bindings
+
+Audio Settings
+- master volume
+- sfx volume
+- music volume
+
+Development Settings
+- debug mode 
+- show FPS
+- draw hitboxes
+- logging
+
+Save and Load
+- save locations?
+
+Game Settings
+- Game Seeds?
+- enabling modules?
+
+--------------------------------------------------------------------------------
+
+input
+- event listener for 'blur' - for when window loses focus
+- event listener for 'contextmenu' - for when you right click on the page
+- having blur and contextmenu reset silently vs. having input clear on the next frame which will trigger release logic
+- fixing LAST_INPUT within input
+- BUG: right controller joystick moving right and left controller joystick moving left doesn't work for LAST_INPUT control mode.
+
+transitions
+- fade in/out
+- circle in and out 
+
+
+
+
+
+-- STEPS FOR ADDING NEW GAME State
+1. copy and paste existing game state. save under new state name
+2. change class name
+3. adding to GameState.js import list and GameState object (which is passed into Game through main.js)
+
+
+- adding default fallback options for when config value is not defined or included
+
+- should assets be loaded in Game.js' init method?
+- passing game config and theme into state machine context. is this actually better than importing files into each game state?
+    - i.e., HomeState setup vs. PlayState setup
